@@ -1,6 +1,5 @@
-from .node import Node
 from .decision_tree import DecisionTree
-from .eval import train_test_split, accuracy, balanced_accuracy
+from ..eval import train_test_split, accuracy, balanced_accuracy
 
 ## dataset -> load your dataset here
 ## get X and y -> X = dataset[:, :-1], y = dataset [:, -1]
