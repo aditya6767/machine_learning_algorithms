@@ -80,7 +80,7 @@ class NeuralNetwork:
             Z, linear_cache = self._linear_forward(A_prev, W, b) 
             A, activation_cache = relu(Z) 
             #Store the cache for backpropagation
-        cache = (linear_cache, activation_cache)
+        cache: Cache = (linear_cache, activation_cache)
         return A, cache
     
     def forward_propagation(self, X: ndarray) -> Tuple[ndarray, List[Cache]]:
@@ -123,7 +123,7 @@ class NeuralNetwork:
         cost -- cross-entropy cost
         """
         # Get number of training examples
-        m = y.shape[1]
+        m = y.shape[0]
         # Compute cost we're adding small epsilon for numeric stability
         cost = (-1/m) * (np.dot(y, np.log(predictions+1e-9).T) + np.dot((1-y), np.log(1-predictions+1e-9).T))
         # squeeze the cost to set it into the correct shape 

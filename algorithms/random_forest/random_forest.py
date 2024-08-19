@@ -2,7 +2,7 @@ import numpy as np
 
 from numpy import ndarray
 
-from decision_tree import DecisionTree
+from algorithms.decision_tree import DecisionTree
 
 class RandomForest:
     """
